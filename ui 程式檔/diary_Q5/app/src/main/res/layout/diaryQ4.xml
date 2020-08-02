@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/guibackcolor"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="513dp"
+        android:background="@drawable/layoutcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="177dp">
+
+        <Button
+            android:id="@+id/btn_celebrate"
+            style="@style/btn_celebrate"
+            android:layout_width="122dp"
+            android:layout_height="118dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="226dp"
+            tools:layout_editor_absoluteY="26dp" />
+
+        <Button
+            android:id="@+id/btn_new"
+            style="@style/btn_new"
+            android:layout_width="123dp"
+            android:layout_height="125dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="282dp" />
+
+        <Button
+            android:id="@+id/btn_meeting"
+            style="@style/btn_meeting"
+            android:layout_width="135dp"
+            android:layout_height="125dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="157dp" />
+
+        <Button
+            android:id="@+id/btn_nowhy"
+            style="@style/btn_nowhy"
+            android:layout_width="140dp"
+            android:layout_height="135dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/btn_yummy"
+            style="@style/btn_yummy"
+            android:layout_width="128dp"
+            android:layout_height="127dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="341dp" />
+
+        <Button
+            android:id="@+id/btn_tired"
+            style="@style/btn_tired"
+            android:layout_width="132dp"
+            android:layout_height="139dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="264dp"
+            tools:layout_editor_absoluteY="341dp" />
+
+        <Button
+            android:id="@+id/btn_hungry"
+            style="@style/btn_hungry"
+            android:layout_width="129dp"
+            android:layout_height="131dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="244dp"
+            tools:layout_editor_absoluteY="151dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:background="@color/yellow"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <Button
+            android:id="@+id/btn_skip"
+            style="@style/btn_skip"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="跳題"
+            android:textColor="#FAF9F9"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <Button
+            android:id="@+id/btn_preivew"
+            style="@style/btn_preview"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:text="預覽"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_skip"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_back"
+            android:layout_width="53dp"
+            android:layout_height="77dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="-31dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="為什麼會想吃這些美食？"
+        android:textColor="#8C5A5A"
+        android:textSize="33sp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="390dp"
+        android:layout_height="24dp"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/progressbar"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="701dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
