@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/guibackcolor"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="618dp"
+        android:background="@drawable/layoutcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="115dp" >
+
+        <ScrollView
+            android:layout_width="410dp"
+            android:layout_height="616dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:background="@color/yellow"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <Button
+            android:id="@+id/btn_skip"
+            style="@style/btn_skip"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="摯友"
+            android:textColor="#FAF9F9"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.526" />
+
+        <Button
+            android:id="@+id/btn_preivew"
+            style="@style/btn_preview"
+            android:layout_width="55dp"
+            android:layout_height="36dp"
+            android:text="好友"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_skip"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.526" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_back"
+            android:layout_width="53dp"
+            android:layout_height="77dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="-31dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="預覽"
+        android:textColor="#8C5A5A"
+        android:textSize="33sp"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+    <Button
+        android:id="@+id/btn_check"
+        style="@style/btn_check"
+        android:layout_width="52dp"
+        android:layout_height="49dp"
+        tools:layout_editor_absoluteX="344dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <Button
+        android:id="@+id/btn_addphoto"
+        style="@style/btn_addphoto"
+        android:layout_width="59dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
