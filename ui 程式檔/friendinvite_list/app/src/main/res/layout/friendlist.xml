@@ -29,16 +29,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
-        <Button
-            android:id="@+id/btn_friendback"
-            style="@style/btn_friendback"
-            android:layout_width="62dp"
-            android:layout_height="81dp"
-            android:textColor="#FAF8F8"
-            android:textSize="18dp"
-            tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="-26dp" />
-
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
@@ -48,12 +38,24 @@
             android:textSize="24sp"
             tools:layout_editor_absoluteX="182dp"
             tools:layout_editor_absoluteY="13dp" />
+
+        <Button
+            android:id="@+id/btn_friendlist"
+            style="@style/btn_friendlist"
+            android:layout_width="54dp"
+            android:layout_height="90dp"
+            android:text="摯友"
+            android:textColor="#ADC7A5"
+            android:textSize="10sp"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="-33dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="395dp"
         android:layout_height="198dp"
-        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteX="9dp"
         tools:layout_editor_absoluteY="66dp" />
 
     <ImageView
