@@ -418,13 +418,30 @@
         <!--<item name="android:padding">10dip</item>-->
         <item name="android:drawableTop">@mipmap/ic_friendsearch_foreground</item>
     </style>
-    <style name="btn_friendlist" parent="@android:style/Widget.Button">
+    <style name="btn_addbestfriend" parent="@android:style/Widget.Button">
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>-->
         <item name="android:background">@drawable/btn_friendlistshape</item>
         <!--<item name="android:padding">10dip</item>-->
+        <item name="android:drawableTop">@mipmap/ic_addbestfriend_foreground</item>
+    </style>
+    <style name="btn_friendlist" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/btn_friendlistshape</item>
+        <item name="android:paddingTop">-10dp</item>
+        <item name="android:drawablePadding">-35dp</item>
         <item name="android:drawableTop">@mipmap/ic_friendlist_foreground</item>
+    </style>
+    <style name="btn_confirmbestfriend" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/btn_friendlistshape</item>
+        <!--<item name="android:padding">10dip</item>-->
+        <item name="android:drawableTop">@mipmap/ic_confirmbestfriend_foreground</item>
     </style>
     <style name="btn_friendconfirm" parent="@android:style/Widget.Button">
         <!--<item name="android:textSize">20sp</item>
@@ -445,7 +462,7 @@
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>-->
-        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:background">@drawable/btn_backprofileset</item>
         <item name="android:paddingRight">-30dp</item>
         <item name="android:drawableRight">@mipmap/ic_setback_foreground</item>
     </style>
