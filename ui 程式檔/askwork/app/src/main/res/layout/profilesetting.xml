@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DBCB"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="403dp"
+        android:layout_height="424dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="306dp">
+
+        <Button
+            android:id="@+id/btn_chapassword"
+            style="@style/btn_chapassword"
+            android:layout_width="203dp"
+            android:layout_height="68dp"
+            android:text="變更密碼"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.157" />
+
+        <Button
+            android:id="@+id/btn_chapersoninfo"
+            style="@style/btn_chapersoninfo"
+            android:layout_width="245dp"
+            android:layout_height="62dp"
+            android:text="修改個人資料"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.575"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.342" />
+
+        <Button
+            android:id="@+id/btn_info"
+            style="@style/btn_info"
+            android:layout_width="228dp"
+            android:layout_height="64dp"
+            android:text="說明"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.516" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            style="@style/btn_logout"
+            android:layout_width="228dp"
+            android:layout_height="64dp"
+            android:text="登出"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.694" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="407dp"
+        android:layout_height="301dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="2dp">
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="409dp"
+            android:layout_height="270dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/ic_background_foreground"
+            tools:layout_editor_absoluteX="-3dp"
+            tools:layout_editor_absoluteY="-23dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="273dp"
+            android:layout_height="174dp"
+            android:background="@drawable/profilesettingcorner"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="129dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="89dp"
+                android:layout_height="82dp"
+                android:src="@mipmap/ic_usericon_foreground"
+                app:riv_border_color="#333333"
+                app:riv_oval="true"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_setback"
+            style="@style/btn_setback"
+            android:layout_width="55dp"
+            android:layout_height="53dp"
+            android:textColor="#73AF00"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
