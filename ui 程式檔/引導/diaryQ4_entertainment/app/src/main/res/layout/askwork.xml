@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/guibackcolor"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="請選擇您的職業"
+        android:textColor="#CFAE8F"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="70dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        style="@style/btn_habitfood"
+        android:layout_width="136dp"
+        android:layout_height="131dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/ic_whitecollar_foreground"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <View
+        android:layout_width="148dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/imageshape"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        style="@style/btn_habitfood"
+        android:layout_width="136dp"
+        android:layout_height="131dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/ic_waiter_foreground"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <View
+        android:layout_width="144dp"
+        android:layout_height="147dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/imageshape"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        style="@style/btn_habitfood"
+        android:layout_width="136dp"
+        android:layout_height="131dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/ic_manufacter_foreground"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="331dp" />
+
+    <View
+        android:layout_width="144dp"
+        android:layout_height="147dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/imageshape"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        style="@style/btn_habitfood"
+        android:layout_width="136dp"
+        android:layout_height="131dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/ic_student_foreground"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="331dp" />
+
+    <View
+        android:layout_width="142dp"
+        android:layout_height="145dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/imageshape"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        style="@style/btn_habitfood"
+        android:layout_width="136dp"
+        android:layout_height="131dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/ic_entertainment_foreground"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <View
+        android:layout_width="144dp"
+        android:layout_height="147dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/imageshape"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="511dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        style="@style/btn_habitfood"
+        android:layout_width="136dp"
+        android:layout_height="131dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@mipmap/ic_habitelse_foreground"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="518dp" />
+
+    <View
+        android:layout_width="144dp"
+        android:layout_height="147dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/imageshape"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="511dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
