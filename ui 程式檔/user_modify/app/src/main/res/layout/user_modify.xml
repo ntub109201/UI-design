@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DBCB"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/bg_user_job"
+        style="@style/bg_user_job"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="218dp"
+        android:layout_height="40dp"
+        android:background="@drawable/spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.74" />
+
+    <Button
+        android:id="@+id/bg_user_nickname.png"
+        style="@style/bg_user_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/old_pw"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_user_job"
+        app:layout_constraintVertical_bias="0.005" />
+
+    <EditText
+        android:id="@+id/old_pw"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/edittext"
+        android:inputType="phone"
+        android:text="暱稱"
+        android:textColor="#E7BDB5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="411dp"
+        android:layout_height="463dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/bg_user_foreground"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-111dp" />
+
+    <Button
+        android:id="@+id/btn_back_modify"
+        style="@style/btn_back_modify"
+        android:layout_width="53dp"
+        android:layout_height="77dp"
+        android:textColor="#FAF8F8"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-22dp" />
+
+    <Button
+        android:id="@+id/btn_check"
+        style="@style/btn_check"
+        android:layout_width="53dp"
+        android:layout_height="77dp"
+        android:textColor="#FAF8F8"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="345dp"
+        tools:layout_editor_absoluteY="-13dp" />
+
+    <Button
+        android:id="@+id/btn_bg_img"
+        style="@style/btn_bg_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更換大頭貼"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundedImageView"
+        android:layout_width="89dp"
+        android:layout_height="82dp"
+        android:src="@mipmap/usericon_foreground"
+        app:riv_border_color="#333333"
+        app:riv_oval="true"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <Button
+        android:id="@+id/btn_setuserphoto"
+        style="@style/btn_setuserphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
