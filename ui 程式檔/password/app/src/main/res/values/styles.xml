@@ -1,0 +1,98 @@
+<resources>
+<style name="AppBaseTheme" parent="android:Theme.Light">
+</style>
+
+<style name="AppTheme" parent="AppBaseTheme">
+</style>
+
+    <style name="btn_skip" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_skippreview</item>
+    </style>
+    <style name="btn_preview" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_skippreview</item>
+    </style>
+    <style name="btn_back" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_skippreview</item>
+        <item name="android:drawableTop">@mipmap/ic_back_foreground</item>
+    </style>
+
+
+    <style name="btn_impulsive" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_impulsive</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:drawableTop">@mipmap/btn_impulsive_foreground</item>
+    </style>
+    <style name="btn_nogo" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_nogo</item>
+        <item name="android:drawableTop">@mipmap/btn_nogo_foreground</item>
+    </style>
+    <style name="btn_request" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_request</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:drawableTop">@mipmap/btn_requests_foreground
+        </item>
+    </style>
+    <style name="btn_shopping" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_shopping</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:drawableTop">@mipmap/btn_shopping_foreground</item>
+    </style>
+    <style name="btn_nowhy" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_nowhy</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:drawableTop">@mipmap/btn_nowhy_foreground</item>
+    </style>
+
+
+    <!--變更密碼-->
+    <style name="btn_back_pw" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_skippreview_pw</item>
+        <item name="android:drawableTop">@mipmap/btn_back_pw_foreground</item>
+    </style>
+
+    <style name="pw_key" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/pw_key</item>
+        <item name="android:drawableTop">@mipmap/pw_key</item>
+    </style>
+    <style name="pw_key_new" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/pw_key_new</item>
+        <item name="android:drawableTop">@mipmap/pw_key_new</item>
+    </style>
+    <style name="pw_check" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/pw_check</item>
+    </style>
+
+
+    <!--user_modify-->
+    <style name="btn_bg_img" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_bg_img</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:drawableTop">@mipmap/btn_bg_img_round</item>
+    </style>
+    <style name="bg_user_job" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/bg_user_job</item>
+        <item name="android:drawableTop">@mipmap/bg_user_job_foreground</item>
+    </style>
+    <style name="bg_user_nickname" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/bg_user_nickname</item>
+        <item name="android:drawableTop">@mipmap/bg_user_nickname_foreground</item>
+    </style>
+    <style name="bg_user" parent="@android:style/Widget.Button">
+        <item name="android:width">1400dp</item>
+        <item name="android:drawableTop">@mipmap/bg_user</item>
+    </style>
+    <style name="btn_back_modify" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_backprofileset</item>
+        <item name="android:drawableTop">@mipmap/ic_back_foreground</item>
+    </style>
+    <style name="btn_check" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_backprofileset</item>
+        <item name="android:drawableTop">@mipmap/btn_check_foreground</item>
+    </style>
+    <style name="btn_setuserphoto" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>-->
+        <item name="android:background">@drawable/btn_backprofileset</item>
+        <item name="android:drawableRight">@mipmap/btn_camera_foreground</item>
+    </style>
+</resources>
