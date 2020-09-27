@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="412dp"
+    android:layout_height="513dp"
+    android:background="@drawable/layoutcorner"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:layout_editor_absoluteY="177dp">
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/bg_line"
+        android:layout_width="380dp"
+        android:layout_height="3dp"
+        android:background="#C3F3FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.629" />
+
+    <TextView
+        android:id="@+id/textView14"
+        style="@style/bg_line"
+        android:layout_width="380dp"
+        android:layout_height="3dp"
+        android:background="#C3F3FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <Button
+        android:id="@+id/btn_friend"
+        style="@style/btn_friend"
+        android:layout_width="107dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <Button
+        android:id="@+id/btn_family"
+        style="@style/btn_family"
+        android:layout_width="109dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <Button
+        android:id="@+id/btn_lover"
+        style="@style/btn_lover"
+        android:layout_width="109dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="380dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
