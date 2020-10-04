@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/guibackcolor"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="513dp"
+        android:background="@drawable/layoutcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="177dp">
+
+        <Button
+            android:id="@+id/btn_date"
+            style="@style/btn_date"
+            android:layout_width="118dp"
+            android:layout_height="120dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="72dp"
+            tools:layout_editor_absoluteY="68dp" />
+
+        <Button
+            android:id="@+id/btn_dinnerlover"
+            style="@style/btn_dinnerlover"
+            android:layout_width="117dp"
+            android:layout_height="112dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="215dp" />
+
+        <Button
+            android:id="@+id/btn_movielover"
+            style="@style/btn_movielover"
+            android:layout_width="120dp"
+            android:layout_height="122dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="78dp" />
+
+        <Button
+            android:id="@+id/btn_shoplover"
+            style="@style/btn_shoplover"
+            android:layout_width="124dp"
+            android:layout_height="118dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="349dp" />
+
+        <Button
+            android:id="@+id/btn_workoutlover"
+            style="@style/btn_workoutlover"
+            android:layout_width="110dp"
+            android:layout_height="112dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="215dp" />
+
+        <Button
+            android:id="@+id/btn_singlover"
+            style="@style/btn_singlover"
+            android:layout_width="109dp"
+            android:layout_height="126dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="349dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:background="@color/yellow"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <Button
+            android:id="@+id/btn_friendsearch"
+            style="@style/btn_skip"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="跳題"
+            android:textColor="#FAF9F9"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <Button
+            android:id="@+id/btn_preivew"
+            style="@style/btn_preview"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:text="預覽"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_friendsearch"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_back"
+            android:layout_width="53dp"
+            android:layout_height="77dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="-31dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您今天做了什麼呢？"
+        android:textColor="#8C5A5A"
+        android:textSize="33sp"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="390dp"
+        android:layout_height="24dp"
+        android:max="100"
+        android:progress="5"
+        android:progressDrawable="@drawable/progressbar"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="701dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
