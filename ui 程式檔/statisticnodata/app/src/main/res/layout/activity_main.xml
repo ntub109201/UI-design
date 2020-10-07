@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/guibackcolor"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="418dp"
+        android:layout_height="553dp"
+        android:background="@drawable/layoutcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="178dp">
+
+        <Button
+            android:id="@+id/btn_thunder"
+            style="@style/btn_thunder"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.184"
+            app:layout_constraintStart_toEndOf="@+id/btn_cloud"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.549" />
+
+        <Button
+            android:id="@+id/btn_suncloud"
+            style="@style/btn_suncloud"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="84dp"
+            android:layout_marginRight="84dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.135"
+            app:layout_constraintStart_toEndOf="@+id/btn_sun"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.211" />
+
+        <Button
+            android:id="@+id/btn_cloud"
+            style="@style/btn_cloud"
+            android:layout_width="106dp"
+            android:layout_height="102dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.317"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.47" />
+
+        <Button
+            android:id="@+id/btn_sun"
+            style="@style/btn_sun"
+            android:layout_width="120dp"
+            android:layout_height="114dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/btn_cloud"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.308"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.672" />
+
+        <Button
+            android:id="@+id/btn_rain"
+            style="@style/btn_rain"
+            android:layout_width="103dp"
+            android:layout_height="105dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.346"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.772" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您今天心情如何呢？"
+            android:textColor="#8C5A5A"
+            android:textSize="33sp"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="34dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello  姓名 ：）"
+        android:textColor="#8C5A5A"
+        android:textSize="24dp"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_user_icon_foreground"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:background="@color/yellow"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <Button
+            android:id="@+id/btn_friendsearch"
+            style="@style/btn_skip"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="跳題"
+            android:textColor="#FAF9F9"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <Button
+            android:id="@+id/btn_preivew"
+            style="@style/btn_preview"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:text="預覽"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_friendsearch"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_back"
+            android:layout_width="53dp"
+            android:layout_height="77dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="-31dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
