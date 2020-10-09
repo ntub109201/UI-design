@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAFAFA"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="375dp"
+        android:layout_height="375dp"
+        android:background="@drawable/frienddiarylayoutcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="356dp">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="360dp"
+            android:layout_height="350dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="343dp"
+        android:layout_height="55dp"
+        android:background="@drawable/profilesettingcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="290dp">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="73dp"
+            android:layout_height="57dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@mipmap/ic_korea_foreground"
+            tools:layout_editor_absoluteX="76dp"
+            tools:layout_editor_absoluteY="-1dp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="晴天"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="195dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="411dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/ic_background_foreground"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="61dp"
+        android:background="@android:color/white"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <Button
+            android:id="@+id/btn_historydiaryback"
+            style="@style/btn_historydiaryback"
+            android:layout_width="39dp"
+            android:layout_height="75dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="13dp"
+            tools:layout_editor_absoluteY="-26dp" />
+
+        <Button
+            android:id="@+id/btn_historydiarysave"
+            style="@style/btn_historydiarysave"
+            android:layout_width="47dp"
+            android:layout_height="80dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="311dp"
+            tools:layout_editor_absoluteY="-25dp" />
+
+        <Button
+            android:id="@+id/btn_historydiaryshare"
+            style="@style/btn_historydiaryshare"
+            android:layout_width="45dp"
+            android:layout_height="81dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="258dp"
+            tools:layout_editor_absoluteY="-25dp" />
+
+        <Button
+            android:id="@+id/btn_historydiarydelete"
+            style="@style/btn_historydiarydelete"
+            android:layout_width="39dp"
+            android:layout_height="75dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="366dp"
+            tools:layout_editor_absoluteY="-25dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020/09/07"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
