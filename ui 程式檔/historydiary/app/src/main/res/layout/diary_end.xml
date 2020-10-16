@@ -20,7 +20,30 @@
             android:layout_width="410dp"
             android:layout_height="616dp"
             tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp"/>
+            tools:layout_editor_absoluteY="1dp" />
+
+        <Button
+            android:id="@+id/btn_sharefriend"
+            style="@style/btn_sharefriend"
+            android:layout_width="64dp"
+            android:layout_height="63dp"
+            android:text="摯友"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="318dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/btn_sharebestfriend"
+            style="@style/btn_sharefriend"
+            android:layout_width="63dp"
+            android:layout_height="64dp"
+            android:text="所有
+            好友"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="246dp"
+            tools:layout_editor_absoluteY="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,36 +54,6 @@
         tools:layout_editor_absoluteY="-1dp">
 
         <Button
-            android:id="@+id/btn_friendsearch"
-            style="@style/btn_skip"
-            android:layout_width="54dp"
-            android:layout_height="37dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:text="摯友"
-            android:textColor="#FAF9F9"
-            android:textSize="18dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.526" />
-
-        <Button
-            android:id="@+id/btn_preivew"
-            style="@style/btn_preview"
-            android:layout_width="55dp"
-            android:layout_height="36dp"
-            android:text="好友"
-            android:textColor="#FAF8F8"
-            android:textSize="18dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_friendsearch"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.526" />
-
-        <Button
             android:id="@+id/btn_back"
             style="@style/btn_back"
             android:layout_width="53dp"
@@ -69,6 +62,14 @@
             android:textSize="18dp"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="-31dp" />
+
+        <Button
+            android:id="@+id/btn_check"
+            style="@style/btn_check"
+            android:layout_width="52dp"
+            android:layout_height="49dp"
+            tools:layout_editor_absoluteX="344dp"
+            tools:layout_editor_absoluteY="3dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -83,19 +84,19 @@
         tools:layout_editor_absoluteY="63dp" />
 
     <Button
-        android:id="@+id/btn_check"
-        style="@style/btn_check"
-        android:layout_width="52dp"
-        android:layout_height="49dp"
-        tools:layout_editor_absoluteX="344dp"
-        tools:layout_editor_absoluteY="59dp" />
-
-    <Button
         android:id="@+id/btn_addphoto"
         style="@style/btn_addphoto"
         android:layout_width="59dp"
         android:layout_height="50dp"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="60dp" />
+        tools:layout_editor_absoluteX="347dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+    <Button
+        android:id="@+id/btn_sharediary"
+        style="@style/btn_sharediary"
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="61dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
