@@ -7,6 +7,8 @@
     android:background="#EAFAFA"
     tools:context=".MainActivity">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="375dp"
         android:layout_height="375dp"
@@ -56,11 +58,11 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="411dp"
-        android:layout_height="220dp"
+        android:layout_width="418dp"
+        android:layout_height="218dp"
         android:scaleType="centerCrop"
         app:srcCompat="@mipmap/ic_background_foreground"
-        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="60dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -91,6 +93,16 @@
             tools:layout_editor_absoluteY="-25dp" />
 
         <Button
+            android:id="@+id/btn_historydiaryshare"
+            style="@style/btn_historydiaryshare"
+            android:layout_width="45dp"
+            android:layout_height="81dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="258dp"
+            tools:layout_editor_absoluteY="-25dp" />
+
+        <Button
             android:id="@+id/btn_historydiarydelete"
             style="@style/btn_historydiarydelete"
             android:layout_width="39dp"
@@ -106,10 +118,33 @@
             android:layout_height="wrap_content"
             android:text="2020/09/07"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="142dp"
-            tools:layout_editor_absoluteY="16dp" />
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="14dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_sharefriend1"
+        style="@style/btn_sharefriend1"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        android:text="所有
+        好友"
+        android:textColor="#6F6B68"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <Button
+        android:id="@+id/btn_sharebestfriend1"
+        style="@style/btn_sharefriend1"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        android:text="摯友"
+        android:textColor="#6F6B68"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="287dp"
+        tools:layout_editor_absoluteY="71dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

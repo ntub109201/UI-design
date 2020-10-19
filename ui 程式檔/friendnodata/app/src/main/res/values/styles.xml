@@ -107,6 +107,15 @@
         <item name="android:drawableRight">@mipmap/ic_addphoto_foreground</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="btn_sharediary" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:paddingRight">-20dp</item>
+        <item name="android:drawableRight">@mipmap/ic_sharediary_foreground</item>
+        <item name="android:gravity">center</item>
+    </style>
     <style name="btn_check" parent="@android:style/Widget.Button">
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
@@ -803,6 +812,15 @@
         <item name="android:background">@drawable/btn_friendconfirm</item>
         <!--<item name="android:padding">10dip</item>-->
     </style>
+    <style name="btn_addfriend" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:background">@drawable/btn_addfriend</item>
+        <item name="android:drawableRight">@mipmap/ic_nodatasocialicon2_foreground</item>
+        <!--<item name="android:padding">10dip</item>-->
+    </style>
     <style name="btn_edit" parent="@android:style/Widget.Button">
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
@@ -823,7 +841,7 @@
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>-->
-        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:background">@drawable/btn_backprofileset</item>
         <item name="android:drawablePadding">0dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:drawableLeft">@mipmap/ic_chpassword_foreground</item>
@@ -832,7 +850,7 @@
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>-->
-        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:background">@drawable/btn_backprofileset</item>
         <item name="android:drawablePadding">0dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:drawableLeft">@mipmap/ic_chpersoninfo_foreground</item>
@@ -841,7 +859,7 @@
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>-->
-        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:background">@drawable/btn_backprofileset</item>
         <item name="android:drawablePadding">0dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:drawableLeft">@mipmap/ic_info_foreground</item>
@@ -850,7 +868,7 @@
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>-->
-        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:background">@drawable/btn_backprofileset</item>
         <item name="android:drawablePadding">0dp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:drawableLeft">@mipmap/ic_logout_foreground</item>
@@ -895,6 +913,14 @@
         <!--<item name="android:padding">10dip</item>-->
         <item name="android:drawableTop">@mipmap/ic_histortdiarysave_foreground</item>
     </style>
+    <style name="btn_historydiaryshare" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/btn_friendlistshape</item>
+        <!--<item name="android:padding">10dip</item>-->
+        <item name="android:drawableTop">@mipmap/ic_sharehistorydiary_foreground</item>
+    </style>
     <style name="btn_historydiarydelete" parent="@android:style/Widget.Button">
         <!--<item name="android:textSize">20sp</item>
         <item name="android:textColor">#ffffff</item>
@@ -902,5 +928,21 @@
         <item name="android:background">@drawable/btn_friendlistshape</item>
         <!--<item name="android:padding">10dip</item>-->
         <item name="android:drawableTop">@mipmap/ic_histortdiarydelete_foreground</item>
+    </style>
+    <style name="btn_sharefriend" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/btn_sharediaryend</item>
+        <!--<item name="android:padding">10dip</item>-->
+
+    </style>
+    <style name="btn_sharefriend1" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/btn_sharediary1</item>
+        <!--<item name="android:padding">10dip</item>-->
+
     </style>
 </resources>
