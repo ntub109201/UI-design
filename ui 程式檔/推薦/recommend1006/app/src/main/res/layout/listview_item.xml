@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp"
+    android:background="#A0D1D8">
+
+    <!-- Bottom View Start-->
+    <LinearLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="2">
+        <!--What you want to show-->
+        <Button
+            android:id="@+id/map_detail_btn"
+            style="@style/btn_detailed"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/map_navigation_btn"
+            style="@style/btn_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="2.5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <!-- Bottom View End-->
+
+    <!-- Surface View Start -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A0D1D8"
+        android:padding="10dp"
+        android:weightSum="1">
+        <!--What you want to show in SurfaceView-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/shadow">
+
+            <ImageView
+                android:id="@+id/store_distance_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="0.5"
+                android:contentDescription="TODO"
+                android:gravity="bottom|center_horizontal"
+                android:src="@mipmap/btn_placeholder_foreground"
+                swipe:layout_constraintBottom_toBottomOf="parent"
+                swipe:layout_constraintEnd_toStartOf="@+id/store_distance_textView" />
+
+            <ImageView
+                android:id="@+id/store_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="4"
+                android:contentDescription="TODO"
+                android:scaleType="fitCenter"
+                swipe:layout_constraintBottom_toBottomOf="parent"
+                swipe:layout_constraintStart_toStartOf="parent"
+                swipe:layout_constraintTop_toTopOf="parent"
+                swipe:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/store_name_textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_weight="3.5"
+                android:gravity="center_horizontal|center_vertical"
+                android:lines="3"
+                android:maxLines="3"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text="name"
+                android:textAlignment="textStart"
+                android:textColor="#59B4C4"
+                swipe:layout_constraintBottom_toBottomOf="parent"
+                swipe:layout_constraintEnd_toStartOf="@+id/store_distance_image"
+                swipe:layout_constraintStart_toEndOf="@+id/store_image"
+                swipe:layout_constraintTop_toTopOf="parent"
+                swipe:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/store_distance_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:text="distance"
+                android:textColor="#B1B1B1"
+                swipe:layout_constraintBottom_toBottomOf="parent"
+                swipe:layout_constraintEnd_toEndOf="parent"
+                swipe:layout_constraintTop_toTopOf="parent"
+                swipe:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                swipe:layout_constraintBottom_toBottomOf="parent"
+                swipe:layout_constraintEnd_toEndOf="parent"
+                swipe:layout_constraintTop_toTopOf="parent"
+                swipe:layout_constraintVertical_bias="0.0"
+                swipe:srcCompat="@mipmap/btn_tap_foreground" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+    <!-- Surface View End -->
+</com.daimajia.swipe.SwipeLayout>
