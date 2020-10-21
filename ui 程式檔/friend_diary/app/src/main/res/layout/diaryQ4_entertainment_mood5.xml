@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/guibackcolor"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="513dp"
+        android:background="@drawable/layoutcorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="177dp">
+
+        <Button
+            android:id="@+id/btn_argue"
+            style="@style/btn_argue"
+            android:layout_width="128dp"
+            android:layout_height="127dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <Button
+            android:id="@+id/btn_badthings"
+            style="@style/btn_badthings"
+            android:layout_width="129dp"
+            android:layout_height="130dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="59dp"
+            tools:layout_editor_absoluteY="240dp" />
+
+        <Button
+            android:id="@+id/btn_stressful"
+            style="@style/btn_stressful"
+            android:layout_width="128dp"
+            android:layout_height="131dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="73dp" />
+
+        <Button
+            android:id="@+id/btn_testfail"
+            style="@style/btn_testfail"
+            android:layout_width="129dp"
+            android:layout_height="131dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="271dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:background="@color/yellow"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <Button
+            android:id="@+id/btn_friendsearch"
+            style="@style/btn_skip"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="跳題"
+            android:textColor="#FAF9F9"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <Button
+            android:id="@+id/btn_preivew"
+            style="@style/btn_preview"
+            android:layout_width="54dp"
+            android:layout_height="37dp"
+            android:text="預覽"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_friendsearch"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.684" />
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_back"
+            android:layout_width="53dp"
+            android:layout_height="77dp"
+            android:textColor="#FAF8F8"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="-31dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="為什麼會想做這些事？"
+        android:textColor="#8C5A5A"
+        android:textSize="33sp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="390dp"
+        android:layout_height="24dp"
+        android:max="100"
+        android:progress="20"
+        android:progressDrawable="@drawable/progressbar"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="701dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
