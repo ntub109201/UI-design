@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="412dp"
+    android:layout_height="513dp"
+    android:background="@drawable/layoutcorner"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:layout_editor_absoluteY="177dp">
+
+    <Button
+        android:id="@+id/btn_korea"
+        style="@style/btn_korea"
+        android:layout_width="118dp"
+        android:layout_height="101dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <Button
+        android:id="@+id/btn_usa"
+        style="@style/btn_usa"
+        android:layout_width="119dp"
+        android:layout_height="95dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <Button
+        android:id="@+id/btn_thai"
+        style="@style/btn_thai"
+        android:layout_width="130dp"
+        android:layout_height="101dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+    <Button
+        android:id="@+id/btn_france"
+        style="@style/btn_france"
+        android:layout_width="122dp"
+        android:layout_height="97dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+    <Button
+        android:id="@+id/btn_china"
+        style="@style/btn_china"
+        android:layout_width="122dp"
+        android:layout_height="94dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+    <Button
+        android:id="@+id/btn_drinks"
+        style="@style/btn_drinks"
+        android:layout_width="93dp"
+        android:layout_height="103dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <Button
+        android:id="@+id/btn_alcohol"
+        style="@style/btn_alcohol"
+        android:layout_width="93dp"
+        android:layout_height="103dp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="366dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
