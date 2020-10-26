@@ -8,134 +8,165 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_paper_cloudy"
-        style="@style/btn_paper_cloudy"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="Button"
+        android:id="@+id/btn_sharefriend"
+        style="@style/btn_handwritesharefriend"
+        android:layout_width="56dp"
+        android:layout_height="63dp"
+        android:text="所有
+好友"
+        android:textColor="#F5C4B7"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.891" />
 
     <Button
-        android:id="@+id/btn_paper_thunder"
-        style="@style/btn_paper_thunder"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="Button"
+        android:id="@+id/btn_sharefriend2"
+        style="@style/btn_handwritesharefriend"
+        android:layout_width="56dp"
+        android:layout_height="63dp"
+        android:text="摯友"
+        android:textColor="#E7B5D8"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.892" />
 
     <Button
-        android:id="@+id/btn_paper_sunny"
-        style="@style/btn_paper_sunny"
+        android:id="@+id/btn_handwrite_sunny"
+        style="@style/btn_handwrite_sunny"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.341" />
 
     <Button
-        android:id="@+id/btn_paper_mc"
-        style="@style/btn_paper_mc"
+        android:id="@+id/btn_handwrite_rain"
+        style="@style/btn_handwrite_rain"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.341" />
 
     <Button
-        android:id="@+id/btn_paper_rain"
-        style="@style/btn_paper_rain"
+        android:id="@+id/btn_handwrite_thunder"
+        style="@style/btn_handwrite_thunder"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="0.726"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.341" />
 
     <Button
-        android:id="@+id/btn_paper_trip"
-        style="@style/btn_paper_trip"
+        android:id="@+id/btn_handwrite_cloudy"
+        style="@style/btn_handwrite_cloudy"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.341" />
 
     <Button
-        android:id="@+id/btn_paper_love"
-        style="@style/btn_paper_love"
+        android:id="@+id/btn_handwrite_mc"
+        style="@style/btn_handwrite_mc"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.341" />
 
     <Button
-        android:id="@+id/btn_paper_food"
-        style="@style/btn_paper_food"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:id="@+id/btn_handwrite_food"
+        style="@style/btn_handwrite_food"
+        android:layout_width="66dp"
+        android:layout_height="67dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.62" />
 
     <Button
-        android:id="@+id/btn_paper_casual"
-        style="@style/btn_paper_casual"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:id="@+id/btn_handwrite_trip"
+        style="@style/btn_handwrite_trip"
+        android:layout_width="67dp"
+        android:layout_height="69dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintHorizontal_bias="0.732"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <Button
-        android:id="@+id/btn_paper_shopping"
-        style="@style/btn_paper_shopping"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:id="@+id/btn_handwrite_play"
+        style="@style/btn_handwrite_play"
+        android:layout_width="67dp"
+        android:layout_height="69dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintHorizontal_bias="0.965"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.619" />
+
+    <Button
+        android:id="@+id/btn_handwrite_love"
+        style="@style/btn_handwrite_love"
+        android:layout_width="67dp"
+        android:layout_height="69dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <Button
+        android:id="@+id/btn_handwrite_shop"
+        style="@style/btn_handwrite_shop"
+        android:layout_width="67dp"
+        android:layout_height="69dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
 
     <TextView
         android:id="@+id/textView19"
@@ -144,8 +175,12 @@
         android:text="心情"
         android:textColor="#494949"
         android:textSize="24dp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="111dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout8"
+        app:layout_constraintVertical_bias="0.243" />
 
     <TextView
         android:id="@+id/textView20"
@@ -154,8 +189,18 @@
         android:text="主題"
         android:textColor="#494949"
         android:textSize="24dp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:text="分享"
+        android:textColor="#494949"
+        android:textSize="24dp"
         tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="293dp" />
+        tools:layout_editor_absoluteY="533dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout8"
@@ -171,23 +216,20 @@
             android:layout_height="47dp"
             android:textColor="#FAF8F8"
             android:textSize="18dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.011"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="4dp" />
 
         <Button
-            android:id="@+id/btn_handwritecheck"
-            style="@style/btn_handwritecheck"
-            android:layout_width="59dp"
-            android:layout_height="45dp"
+            android:id="@+id/btn_check2"
+            style="@style/btn_check"
+            android:layout_width="52dp"
+            android:layout_height="49dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.545" />
+            app:layout_constraintVertical_bias="0.285" />
 
         <TextView
             android:id="@+id/textView18"
@@ -200,5 +242,19 @@
             tools:layout_editor_absoluteY="12dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="請選擇本篇日記的心情和主題"
+        android:textColor="#CFAE8F"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -981,59 +981,63 @@
         <item name="android:drawableRight">@mipmap/ic_handwriteaddpic_foreground</item>
     </style>
     <!--心情-->
-    <style name="btn_paper_sunny" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_sunny" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
         <item name="android:paddingRight">-23dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_sunny_foreground</item>
+        <item name="android:drawableRight">@mipmap/ic_handwritesun_foreground</item>
     </style>
 
-    <style name="btn_paper_mc" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_mc" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
         <item name="android:paddingRight">-23dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_mc_foreground</item>
+        <item name="android:drawableRight">@mipmap/ic_handwritemostlycloud_foreground</item>
     </style>
 
-    <style name="btn_paper_cloudy" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_cloudy" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
         <item name="android:paddingRight">-23dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_cloudy_foreground</item>
+        <item name="android:drawableRight">@mipmap/ic_handwritecloudy_foreground</item>
     </style>
 
-    <style name="btn_paper_thunder" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_thunder" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
         <item name="android:paddingRight">-23dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_thunder_foreground</item>
+        <item name="android:drawableRight">@mipmap/ic_handwritethunder_foreground</item>
     </style>
     <!--主題-->
-    <style name="btn_paper_rain" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_rain" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
         <item name="android:paddingRight">-25dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_rain_foreground</item>
+        <item name="android:drawableRight">@mipmap/ic_handwriterain_foreground</item>
     </style>
 
-    <style name="btn_paper_trip" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_trip" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
-        <item name="android:paddingRight">-25dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_trip_foreground</item>
+        <item name="android:paddingRight">-21dp</item>
+        <item name="android:drawableRight">@mipmap/ic_handwritetrip_foreground</item>
     </style>
-    <style name="btn_paper_shopping" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_shop" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
-        <item name="android:paddingRight">-25dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_shopping_foreground</item>
+        <item name="android:paddingRight">-20dp</item>
+        <item name="android:drawableRight">@mipmap/ic_handwriteshop_foreground</item>
     </style>
-    <style name="btn_paper_love" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_love" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
-        <item name="android:paddingRight">-25dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_love_foreground</item>
+        <item name="android:paddingRight">-21dp</item>
+        <item name="android:drawableRight">@mipmap/ic_handwritelove_foreground</item>
     </style>
-    <style name="btn_paper_food" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_food" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
-        <item name="android:paddingRight">-25dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_food_foreground</item>
+        <item name="android:paddingRight">-21dp</item>
+        <item name="android:drawableRight">@mipmap/ic_handwritefood_foreground</item>
     </style>
-    <style name="btn_paper_casual" parent="@android:style/Widget.Button">
+    <style name="btn_handwrite_play" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/btn_white_mood</item>
-        <item name="android:paddingRight">-25dp</item>
-        <item name="android:drawableRight">@mipmap/btn_paper_casual_foreground</item>
+        <item name="android:paddingRight">-21dp</item>
+        <item name="android:drawableRight">@mipmap/ic_handwriteplay_foreground</item>
+    </style>
+    <style name="btn_handwritesharefriend" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+
     </style>
 </resources>
