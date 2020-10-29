@@ -62,8 +62,16 @@
             android:text="手寫"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
-            tools:layout_editor_absoluteX="182dp"
+            tools:layout_editor_absoluteX="162dp"
             tools:layout_editor_absoluteY="12dp" />
+
+        <Button
+            android:id="@+id/btn_sharehandwritediary"
+            style="@style/btn_sharehandwritediary"
+            android:layout_width="63dp"
+            android:layout_height="53dp"
+            tools:layout_editor_absoluteX="285dp"
+            tools:layout_editor_absoluteY="2dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -75,6 +83,37 @@
         app:srcCompat="@mipmap/ic_handwritepic_foreground"
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="67dp" />
+
+    <Button
+        android:id="@+id/btn_handwritesharefriend"
+        style="@style/btn_sharefriend1"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        android:text="所有
+        好友"
+        android:textColor="#93CBE8"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/btn_handwritesharebestfriend"
+        style="@style/btn_sharefriend1"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        android:text="摯友"
+        android:textColor="#93CBE8"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
         android:id="@+id/btn_addphoto"
