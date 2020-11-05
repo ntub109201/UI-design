@@ -8,18 +8,6 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/bg_user_job"
-        style="@style/bg_user_job"
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spinner"
-        app:layout_constraintHorizontal_bias="0.973"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.13" />
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="218dp"
@@ -27,22 +15,22 @@
         android:background="@drawable/spinner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="0.7" />
 
-    <Button
-        android:id="@+id/bg_user_nickname.png"
-        style="@style/bg_user_nickname"
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="218dp"
+        android:layout_height="40dp"
+        android:background="@drawable/spinner"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/old_pw"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bg_user_job"
-        app:layout_constraintVertical_bias="0.005" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.803" />
 
     <EditText
         android:id="@+id/old_pw"
@@ -84,21 +72,22 @@
         android:layout_width="53dp"
         android:layout_height="77dp"
         android:textColor="#FAF8F8"
-        android:textSize="18dp"
+        android:textSize="14sp"
         tools:layout_editor_absoluteX="345dp"
         tools:layout_editor_absoluteY="-13dp" />
 
     <Button
         android:id="@+id/btn_bg_img"
         style="@style/btn_bg_img"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_bg_img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.28" />
 
     <TextView
         android:id="@+id/textView3"
@@ -126,6 +115,38 @@
         android:layout_height="50dp"
         tools:layout_editor_absoluteX="217dp"
         tools:layout_editor_absoluteY="303dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/old_pw"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/bg_user_job_foreground"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@mipmap/bg_user_nickname_foreground" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/spinner2"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@mipmap/bg_user_social_foreground" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

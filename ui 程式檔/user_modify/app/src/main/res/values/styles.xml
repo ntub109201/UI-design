@@ -65,17 +65,9 @@
 
     <!--user_modify-->
     <style name="btn_bg_img" parent="@android:style/Widget.Button">
-        <item name="android:background">@drawable/btn_bg_img</item>
-        <item name="android:paddingTop">14dp</item>
-        <item name="android:drawableTop">@mipmap/btn_bg_img_round</item>
-    </style>
-    <style name="bg_user_job" parent="@android:style/Widget.Button">
-        <item name="android:background">@drawable/bg_user_job</item>
-        <item name="android:drawableTop">@mipmap/bg_user_job_foreground</item>
-    </style>
-    <style name="bg_user_nickname" parent="@android:style/Widget.Button">
-        <item name="android:background">@drawable/bg_user_nickname</item>
-        <item name="android:drawableTop">@mipmap/bg_user_nickname_foreground</item>
+        <item name="android:background">@drawable/btn_bg_img_background</item>
+        <item name="android:paddingRight">-28dp</item>
+        <item name="android:drawableRight">@mipmap/btn_bg_img_foreground</item>
     </style>
     <style name="bg_user" parent="@android:style/Widget.Button">
         <item name="android:width">1400dp</item>

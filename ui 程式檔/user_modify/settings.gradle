@@ -1,2 +1,2 @@
-rootProject.name='test-when'
 include ':app'
+rootProject.name = "user_modify_1102"
