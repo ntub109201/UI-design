@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/pie_chart"
+        app:layout_constraintEnd_toEndOf="@+id/pie_chart"
+        app:layout_constraintStart_toStartOf="@+id/pie_chart"
+        app:layout_constraintTop_toBottomOf="@+id/selected_date" />
+
     <TextView
         android:id="@+id/selected_date"
         android:layout_width="300dp"
@@ -21,6 +32,7 @@
         android:layout_width="330dp"
         android:layout_height="330dp"
         android:layout_gravity="center"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -35,7 +47,6 @@
         android:background="@drawable/card_shape"
         android:gravity="center"
         android:padding="30dp"
-        android:text="建議"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +54,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pie_chart"
         app:layout_constraintVertical_bias="0.397" />
+
+
+    <Button
+        android:id="@+id/recommend"
+        style="@style/btn_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="前往推薦 →"
+        android:textColor="#88B0FF"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/suggestion"
+        app:layout_constraintEnd_toEndOf="@+id/suggestion"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toStartOf="@+id/suggestion"
+        app:layout_constraintTop_toTopOf="@+id/suggestion"
+        app:layout_constraintVertical_bias="0.914"
+        app:strokeColor="#FFFFFF" />
 
     <View
         android:id="@+id/rectangle_9"

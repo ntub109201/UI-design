@@ -16,6 +16,7 @@ import java.net.URLEncoder;
 import java.util.Iterator;
 import java.util.Map;
 
+
 public class HttpURLConnection_AsyncTask extends AsyncTask<Map<String, String>, Void, String> {
     @Override
     protected String doInBackground(Map<String, String>... maps) {
@@ -28,6 +29,12 @@ public class HttpURLConnection_AsyncTask extends AsyncTask<Map<String, String>, 
             connection = (HttpURLConnection)url.openConnection();
             connection.setRequestMethod("POST");
             //connection.setRequestProperty("authentication", MainActivity.Authentication);
+            Log.d("LOG TEST", "doInBackground: ");
+            if (maps.length > 0){
+                connection.setDoInput(true);
+                Log.d("LOG TEST", "doInBackground: maps length gtr 0");
+            }
+
             connection.setDoInput(true);
             connection.setDoOutput(true);
 //            connection.setInstanceFollowRedirects(true);//设置只作用于当前的实例
