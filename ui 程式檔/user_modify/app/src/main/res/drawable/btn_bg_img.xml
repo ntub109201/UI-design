@@ -10,8 +10,8 @@
             />
         <stroke android:width="2dp" android:color="#C4C4C4" />
         <size
-            android:width="10dp"
-            android:height="10dp" />
+            android:width="5dp"
+            android:height="5dp" />
 
     </shape></item>
 
