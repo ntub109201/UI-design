@@ -17,7 +17,5 @@
         <item name="android:paddingRight">-38dp</item>
     </style>
 
-    <style name="btn_recommend" parent="@android:style/Widget.Button">
-        <item name="android:background">#ffffff</item>
-    </style>
+
 </resources>

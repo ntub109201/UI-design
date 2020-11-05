@@ -33,6 +33,7 @@ import com.google.android.material.datepicker.MaterialDatePicker;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -47,6 +48,7 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 import java.util.Map;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
     private TextView selectedText;
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     int moodResult03 = sqlReturn.moodResult03;
     int moodResult04 = sqlReturn.moodResult04;
     int moodResult05 = sqlReturn.moodResult05;
+    String d1;
+    String d2;
     PieChart pieChart;
 
 
@@ -70,15 +74,33 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 隱藏所有物件
+        findViewById(R.id.suggestion).setVisibility( View.INVISIBLE );
+        findViewById(R.id.recommend).setVisibility( View.INVISIBLE );
+        findViewById(R.id.pie_chart).setVisibility( View.INVISIBLE );
+        findViewById(R.id.statistics__no_text_1).setVisibility( View.INVISIBLE );
+        findViewById(R.id.statistics__no_text_2).setVisibility( View.INVISIBLE );
+        findViewById(R.id.statistics_no).setVisibility( View.INVISIBLE );
 
         progressbar = findViewById(R.id.progressBar);
         progressbar.setZ(10);
+
+        //取得這一個禮拜的日期
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+        Calendar c = Calendar.getInstance();
+        c.add(Calendar.DAY_OF_MONTH, -7);
+        String startDate=sdf.format(c.getTime());
+        c = Calendar.getInstance();
+        c.add(Calendar.DAY_OF_MONTH, 0);
+        String endDate = sdf.format(c.getTime());
+
+        selectedText = findViewById(R.id.date_start);
+        selectedText.setText(startDate);
+        selectedText = findViewById(R.id.date_end);
+        selectedText.setText(endDate);
+        mood_statistics(startDate,endDate);
+
         initialize();
-        pieChart();
-
-
-
-
 
         //date
         selectedText = findViewById(R.id.selected_date);
@@ -107,6 +129,87 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 //        datePickerDialog.show();
         materialDatePicker.show(getSupportFragmentManager(), "NiCe");
     }
+
+
+    private  void suggest() {
+        // 建議
+        int[] moodResult = {sqlReturn.moodResult01, sqlReturn.moodResult02, sqlReturn.moodResult03, sqlReturn.moodResult04, sqlReturn.moodResult05};
+
+        // 資料 - 心情
+        String[] mood1 =
+                {"每天做一件令別人愉快的事，自己也會特別快樂。",
+                        "好心情像冬天裡難得的好天氣，一瞬間照亮瞭心間；好心情像夏天的冰棍，一下子涼爽瞭心田。",
+                        "有了積極的心態，便有了戰勝一切困難取得成功的信心。繼續保持！"};
+        String[] mood2 =
+                {"心情普遍不錯唷！要記得，只要心情是晴朗的，人生就沒有雨天，繼續保持：）",
+                        "微笑，是最美的陽光",};
+        String[] mood3 =
+                {"健康良好的心理是取得成功的開端",
+                        "保持一顆年輕的心，做個簡單的人，享受陽光和溫暖。",
+                        "只要你還願意，世界一定會給你驚喜。"};
+        String[] mood4 =
+                {"活在當下，別在懷念過去或者憧憬未來中浪費掉你現在的生活。",
+                        "結局很美妙的事，但開頭並非如此，不必太灰心。",
+                        "任何事情，總有答案。與其煩惱，不如順其自然",
+                        "一切都會好起來的，即使不會是在今天，但總有一天會的",
+                        "日出东海落西山，愁也一天，喜也一天；遇事不钻牛角尖，人也舒坦，心也舒坦。"};
+        String[] mood5 =
+                {"如果我不堅強、誰能替我勇敢，如果我不獨立誰又能給與支持！找到問題點，一起面對它、解決他！",
+                        "當你不能夠再擁有的時候，你唯一可以做的就是令自己不要忘記。",
+                        "不要小看自己，因為人有無限的可能。",
+                        "所有看似美好的，都經歷過或者正在經歷著不美好。"};
+        // 資料 - tag
+        String[] tag1 =
+                {"每天做一件令別人愉快的事，自己也會特別快樂。",
+                        "好心情像冬天裡難得的好天氣，一瞬間照亮瞭心間；好心情像夏天的冰棍，一下子涼爽瞭心田。",
+                        "有了積極的心態，便有了戰勝一切困難取得成功的信心。繼續保持！"};
+        String[] tag2 =
+                {"心情普遍不錯唷！要記得，只要心情是晴朗的，人生就沒有雨天，繼續保持：）",
+                        "微笑，是最美的陽光",};
+        String[] tag3 =
+                {"健康良好的心理是取得成功的開端",
+                        "保持一顆年輕的心，做個簡單的人，享受陽光和溫暖。",
+                        "只要你還願意，世界一定會給你驚喜。"};
+        String[] tag4 =
+                {"活在當下，別在懷念過去或者憧憬未來中浪費掉你現在的生活。",
+                        "結局很美妙的事，但開頭並非如此，不必太灰心。",
+                        "任何事情，總有答案。與其煩惱，不如順其自然",
+                        "一切都會好起來的，即使不會是在今天，但總有一天會的",
+                        "日出东海落西山，愁也一天，喜也一天；遇事不钻牛角尖，人也舒坦，心也舒坦。"};
+        String[] tag5 =
+                {"如果我不堅強、誰能替我勇敢，如果我不獨立誰又能給與支持！找到問題點，一起面對它、解決他！",
+                        "當你不能夠再擁有的時候，你唯一可以做的就是令自己不要忘記。",
+                        "不要小看自己，因為人有無限的可能。",
+                        "所有看似美好的，都經歷過或者正在經歷著不美好。"};
+
+
+        selectedText = findViewById(R.id.suggestion);
+        selectedText.setText("");
+        if(moodResult[0] >= moodResult[1] && moodResult[0] >= moodResult[2] && moodResult[0] >= moodResult[3] && moodResult[0] >= moodResult[4]) {
+            int num=mood1.length;
+            int number_random = (int)(Math.random()*num);
+            selectedText.append(mood1[number_random]);
+        }else if(moodResult[1] >= moodResult[0] && moodResult[1] >= moodResult[2] && moodResult[1] >= moodResult[3] && moodResult[1] >= moodResult[4]) {
+            int num=mood1.length;
+            int number_random = (int)(Math.random()*num);
+            selectedText.append(mood2[number_random]);
+        }else if(moodResult[2] >= moodResult[0] && moodResult[2] >= moodResult[1] && moodResult[2] >= moodResult[3] && moodResult[1] >= moodResult[4]) {
+            int num=mood1.length;
+            int number_random = (int)(Math.random()*num);
+            selectedText.append(mood3[number_random]);
+        }else if(moodResult[3] >= moodResult[0] && moodResult[3] >= moodResult[2] && moodResult[3] >= moodResult[1] && moodResult[1] >= moodResult[4]) {
+            int num=mood1.length;
+            int number_random = (int)(Math.random()*num);
+            selectedText.append(mood4[number_random]);
+        }else if(moodResult[4] >= moodResult[0] && moodResult[4] >= moodResult[2] && moodResult[4] >= moodResult[3] && moodResult[4] >= moodResult[1]) {
+            int num=mood1.length;
+            int number_random = (int)(Math.random()*num);
+            selectedText.append(mood5[number_random]);
+        }else{
+            selectedText.append("資料不足");
+        }
+    }
+
 
     private  void pieChart() {
         selectedText = findViewById(R.id.suggestion);
@@ -169,10 +272,10 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         pieChart.getLegend().setFormSize(10);  //圖例大小
         pieChart.getLegend().setTextColor(Color.parseColor("#87C3C0"));//圖例顏色
         pieChart.getLegend().setFormToTextSpace(10f); //圖例與文字的間鉅
-        pieChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);//圖例水平居中
+        pieChart.getLegend().setXEntrySpace(30);
+//        pieChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);//圖例水平居中
 
-//        pieChart.invalidate();
-//        pieChart.setOnChartValueSelectedListener(this);
+        pieChart.invalidate();
     }
 
     private void initialize(){
@@ -210,7 +313,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             builder.setCalendarConstraints(constraintsBuilder.build());
             picker = builder.build();
             addSnackBarListeners(picker);
-            picker.show(getSupportFragmentManager(), picker.toString());
+//            picker.show(getSupportFragmentManager(), picker.toString());
         } catch (IllegalArgumentException e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
@@ -241,8 +344,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                             endDate = (long) ((Pair) selection).second;
                         if (startDate!=0 && endDate!=0){
                             try {
-                                String d1 = DateConvertTool.longToString(startDate, "yyyy/MM/dd");
-                                String d2 = DateConvertTool.longToString(endDate, "yyyy/MM/dd");
+                                 d1 = DateConvertTool.longToString(startDate, "yyyy/MM/dd");
+                                 d2 = DateConvertTool.longToString(endDate, "yyyy/MM/dd");
                                 String s = "Start: "+d1+", \nEnd: "+d2;
                                 //selectedText.setText(s);
                                 selectedText = findViewById(R.id.date_start);
@@ -250,103 +353,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                                 selectedText = findViewById(R.id.date_end);
                                 selectedText.setText(d2);
                                 mood_statistics(d1,d2);
-                                // 建議
-                                //int[][] moodResult = {{sqlReturn.moodResult01, sqlReturn.moodResult02, sqlReturn.moodResult03, sqlReturn.moodResult04, sqlReturn.moodResult05},{1,2,3,4,5}};
-                                //java.util.Arrays.sort(moodResult[0]);    //指定各個陣列的數字由大到小排序
-                                int[] moodResult = {sqlReturn.moodResult01, sqlReturn.moodResult02, sqlReturn.moodResult03, sqlReturn.moodResult04, sqlReturn.moodResult05};
-
-                                int statistics_big = 0;
-
-                                // 資料 - 心情
-                                String[] mood1 =
-                                        {"每天做一件令別人愉快的事，自己也會特別快樂。",
-                                        "好心情像冬天裡難得的好天氣，一瞬間照亮瞭心間；好心情像夏天的冰棍，一下子涼爽瞭心田。",
-                                        "有了積極的心態，便有了戰勝一切困難取得成功的信心。繼續保持！"};
-                                String[] mood2 =
-                                        {"心情普遍不錯唷！要記得，只要心情是晴朗的，人生就沒有雨天，繼續保持：）",
-                                         "微笑，是最美的陽光",};
-                                String[] mood3 =
-                                        {"健康良好的心理是取得成功的開端",
-                                         "保持一顆年輕的心，做個簡單的人，享受陽光和溫暖。",
-                                         "只要你還願意，世界一定會給你驚喜。"};
-                                String[] mood4 =
-                                        {"活在當下，別在懷念過去或者憧憬未來中浪費掉你現在的生活。",
-                                         "結局很美妙的事，但開頭並非如此，不必太灰心。",
-                                         "任何事情，總有答案。與其煩惱，不如順其自然",
-                                         "一切都會好起來的，即使不會是在今天，但總有一天會的",
-                                         "日出东海落西山，愁也一天，喜也一天；遇事不钻牛角尖，人也舒坦，心也舒坦。"};
-                                String[] mood5 =
-                                        {"如果我不堅強、誰能替我勇敢，如果我不獨立誰又能給與支持！找到問題點，一起面對它、解決他！",
-                                        "當你不能夠再擁有的時候，你唯一可以做的就是令自己不要忘記。",
-                                        "不要小看自己，因為人有無限的可能。",
-                                        "所有看似美好的，都經歷過或者正在經歷著不美好。"};
-                                // 資料 - tag
-                                String[] tag1 =
-                                        {"每天做一件令別人愉快的事，自己也會特別快樂。",
-                                                "好心情像冬天裡難得的好天氣，一瞬間照亮瞭心間；好心情像夏天的冰棍，一下子涼爽瞭心田。",
-                                                "有了積極的心態，便有了戰勝一切困難取得成功的信心。繼續保持！"};
-                                String[] tag2 =
-                                        {"心情普遍不錯唷！要記得，只要心情是晴朗的，人生就沒有雨天，繼續保持：）",
-                                                "微笑，是最美的陽光",};
-                                String[] tag3 =
-                                        {"健康良好的心理是取得成功的開端",
-                                                "保持一顆年輕的心，做個簡單的人，享受陽光和溫暖。",
-                                                "只要你還願意，世界一定會給你驚喜。"};
-                                String[] tag4 =
-                                        {"活在當下，別在懷念過去或者憧憬未來中浪費掉你現在的生活。",
-                                                "結局很美妙的事，但開頭並非如此，不必太灰心。",
-                                                "任何事情，總有答案。與其煩惱，不如順其自然",
-                                                "一切都會好起來的，即使不會是在今天，但總有一天會的",
-                                                "日出东海落西山，愁也一天，喜也一天；遇事不钻牛角尖，人也舒坦，心也舒坦。"};
-                                String[] tag5 =
-                                        {"如果我不堅強、誰能替我勇敢，如果我不獨立誰又能給與支持！找到問題點，一起面對它、解決他！",
-                                                "當你不能夠再擁有的時候，你唯一可以做的就是令自己不要忘記。",
-                                                "不要小看自己，因為人有無限的可能。",
-                                                "所有看似美好的，都經歷過或者正在經歷著不美好。"};
-
-
-                                selectedText = findViewById(R.id.suggestion);
-                                selectedText.setText("");
-                                if(moodResult[0] >= moodResult[1] && moodResult[0] >= moodResult[2] && moodResult[0] >= moodResult[3] && moodResult[0] >= moodResult[4]) {
-                                    int num=mood1.length;
-                                    int number_random = (int)(Math.random()*num);
-                                    selectedText.append(mood1[number_random]);
-                                }else if(moodResult[1] >= moodResult[0] && moodResult[1] >= moodResult[2] && moodResult[1] >= moodResult[3] && moodResult[1] >= moodResult[4]) {
-                                    int num=mood1.length;
-                                    int number_random = (int)(Math.random()*num);
-                                    selectedText.append(mood2[number_random]);
-                                }else if(moodResult[2] >= moodResult[0] && moodResult[2] >= moodResult[1] && moodResult[2] >= moodResult[3] && moodResult[1] >= moodResult[4]) {
-                                    int num=mood1.length;
-                                    int number_random = (int)(Math.random()*num);
-                                    selectedText.append(mood3[number_random]);
-                                }else if(moodResult[3] >= moodResult[0] && moodResult[3] >= moodResult[2] && moodResult[3] >= moodResult[1] && moodResult[1] >= moodResult[4]) {
-                                    int num=mood1.length;
-                                    int number_random = (int)(Math.random()*num);
-                                    selectedText.append(mood4[number_random]);
-                                }else if(moodResult[4] >= moodResult[0] && moodResult[4] >= moodResult[2] && moodResult[4] >= moodResult[3] && moodResult[4] >= moodResult[1]) {
-                                    int num=mood1.length;
-                                    int number_random = (int)(Math.random()*num);
-                                    selectedText.append(mood5[number_random]);
-                                }else{
-                                    selectedText.append("資料不足");
-                                }
-
-//                                selectedText = findViewById(R.id.suggestion);
-//                                selectedText.append(Integer.toString(statistics_big));
-//                                switch(statistics_big){
-//                                    case 1 :
-//                                        selectedText.append(mood1[number_random]);
-//                                    case 2 :
-//                                        selectedText.append(mood2[number_random]);
-//                                    case 3 :
-//                                        selectedText.append(mood3[number_random]);
-//                                    case 4 :
-//                                        selectedText.append(mood4[number_random]);
-//                                    case 5 :
-//                                        selectedText.append(mood5[number_random]);
-//                                    default :
-//                                        selectedText.append("資料不足");
-//                                }
+                                pieChart();
+                                suggest();
 
                             } catch (ParseException e) {
                                 e.printStackTrace();
@@ -408,22 +416,35 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                     sqlReturn.moodResult03 = jsonObject.getInt("心情3");
                     sqlReturn.moodResult04 = jsonObject.getInt("心情4");
                     sqlReturn.moodResult05 = jsonObject.getInt("心情5");
-//                    moodResult01 = sqlReturn.moodResult01;
-//                    moodResult02 = sqlReturn.moodResult02;
-//                    moodResult03 = sqlReturn.moodResult03;
-//                    moodResult04 = sqlReturn.moodResult04;
-//                    moodResult05 = sqlReturn.moodResult05;
-                    moodResult01 = 0;
-                    moodResult02 = 1;
-                    moodResult03 = 0;
-                    moodResult04 = 0;
-                    moodResult05 = 0;
-                    pieChart();
-//                    progressbar.setVisibility(View.INVISIBLE);
-//                    View tab = findViewById(R.id.pie_chart);
-//                    pieChart = findViewById(R.id.pie_chart);
-//                    pieChart.requestFocus();
-                    //pieChart.callOnClick();
+                    moodResult01 = sqlReturn.moodResult01;
+                    moodResult02 = sqlReturn.moodResult02;
+                    moodResult03 = sqlReturn.moodResult03;
+                    moodResult04 = sqlReturn.moodResult04;
+                    moodResult05 = sqlReturn.moodResult05;
+//                    moodResult01 = 0;
+//                    moodResult02 = 0;
+//                    moodResult03 = 100;
+//                    moodResult04 = 0;
+//                    moodResult05 = 0;
+                    if(moodResult01 == 0 && moodResult02 == 0 && moodResult03 == 0 && moodResult04 ==0 && moodResult05 == 0){
+                        // 資料不足
+                        findViewById(R.id.suggestion).setVisibility( View.INVISIBLE );
+                        findViewById(R.id.recommend).setVisibility( View.INVISIBLE );
+                        findViewById(R.id.pie_chart).setVisibility( View.INVISIBLE );
+                        findViewById(R.id.statistics__no_text_1).setVisibility( View.VISIBLE );
+                        findViewById(R.id.statistics__no_text_2).setVisibility( View.VISIBLE );
+                        findViewById(R.id.statistics_no).setVisibility( View.VISIBLE );
+                    }else {
+                        findViewById(R.id.suggestion).setVisibility( View.VISIBLE );
+                        findViewById(R.id.recommend).setVisibility( View.VISIBLE );
+                        findViewById(R.id.pie_chart).setVisibility( View.VISIBLE );
+                        findViewById(R.id.statistics__no_text_1).setVisibility( View.INVISIBLE );
+                        findViewById(R.id.statistics__no_text_2).setVisibility( View.INVISIBLE );
+                        findViewById(R.id.statistics_no).setVisibility( View.INVISIBLE );
+                        pieChart();
+                        suggest();
+                    }
+                    progressbar.setVisibility(View.INVISIBLE);
                 }else {
                     Toast.makeText(activity, "失敗", Toast.LENGTH_LONG).show();
                 }

@@ -58,19 +58,18 @@
 
     <Button
         android:id="@+id/recommend"
-        style="@style/btn_recommend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackground"
         android:text="前往推薦 →"
         android:textColor="#88B0FF"
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/suggestion"
         app:layout_constraintEnd_toEndOf="@+id/suggestion"
-        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/suggestion"
         app:layout_constraintTop_toTopOf="@+id/suggestion"
-        app:layout_constraintVertical_bias="0.914"
+        app:layout_constraintVertical_bias="0.95"
         app:strokeColor="#FFFFFF" />
 
     <View
@@ -167,6 +166,41 @@
         app:layout_constraintEnd_toStartOf="@+id/rectangle_9"
         app:layout_constraintStart_toEndOf="@+id/rectangle_8"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/statistics__no_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我們需要更多的數據來繪製此圖表"
+        android:textColor="#7FC1C6"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/selected_date"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/statistics__no_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="趕快累計屬於自己的日記吧！"
+        android:textColor="#7FC1C6"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/statistics__no_text_1"
+        app:layout_constraintStart_toStartOf="@+id/statistics__no_text_1"
+        app:layout_constraintTop_toBottomOf="@+id/statistics__no_text_1" />
+
+    <ImageView
+        android:id="@+id/statistics_no"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/selected_date"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@mipmap/statistics_no_foreground" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
