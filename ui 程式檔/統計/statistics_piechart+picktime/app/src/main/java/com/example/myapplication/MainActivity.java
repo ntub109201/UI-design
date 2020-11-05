@@ -3,42 +3,34 @@ package com.example.myapplication;
 import androidx.annotation.AttrRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.util.Pair;
-import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.CompositeDateValidator;
 import com.google.android.material.datepicker.DateValidatorPointBackward;
-import com.google.android.material.datepicker.DateValidatorPointForward;
 import com.google.android.material.datepicker.MaterialDatePicker;
-import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
-
-import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
     private TextView selectedText;
@@ -56,35 +48,56 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
 
         PieChart pieChart= findViewById(R.id.pie_chart);
+        pieChart.setEntryLabelTextSize(17f); //圖表裡文字大小
+        pieChart.setEntryLabelColor(Color.parseColor("#ffffff")); //圖表裡文字顏色
         ArrayList<PieEntry> visitors = new ArrayList<>();
-        visitors.add(new PieEntry(508,"美食"));
-        visitors.add(new PieEntry(600,"購物"));
-        visitors.add(new PieEntry(750,"感情"));
-        visitors.add(new PieEntry(600,"旅遊"));
-        visitors.add(new PieEntry(670,"休閒娛樂"));
+        visitors.add(new PieEntry(20,"美食"));
+        visitors.add(new PieEntry(30,"購物"));
+        visitors.add(new PieEntry(10,"感情"));
+        visitors.add(new PieEntry(10,"旅遊"));
+        visitors.add(new PieEntry(30,"休閒娛樂"));
 
         PieDataSet pieDateSet = new PieDataSet(visitors,"");
         ArrayList<Integer> colors = new ArrayList<Integer>();
-        colors.add(Color.rgb(252, 204, 203));
-        colors.add(Color.rgb(114, 188, 223));
-        colors.add(Color.rgb(255, 123, 124));
-        colors.add(Color.rgb(57, 135, 200));
-        colors.add(Color.rgb(197, 212, 231));
+        colors.add(Color.rgb(245, 187, 207));
+        colors.add(Color.rgb(248, 210, 189));
+        colors.add(Color.rgb(236, 228, 76));
+        colors.add(Color.rgb(119, 183, 246));
+        colors.add(Color.rgb(142, 225, 149));
         pieDateSet.setColors(colors);
-        pieDateSet.setValueTextColor(Color.BLACK);
+        pieDateSet.setValueTextColor(Color.DKGRAY);
         pieDateSet.setValueTextSize(16f);
 
 
         PieData pieData = new PieData(pieDateSet);
+        pieData.setDrawValues(true);
+        pieData.setValueFormatter(new PercentFormatter());
+
 
         pieChart.setData(pieData);
         pieChart.getDescription().setEnabled(false);
         pieChart.animate();
-        pieChart.setDrawHoleEnabled(false);
+        pieChart.setDrawHoleEnabled(false); //true = 空心圓
+        pieChart.getLegend().setTextSize(14f); //圖例文字大小
+        pieChart.getLegend().setFormSize(10);  //圖例大小
+        pieChart.getLegend().setTextColor(Color.parseColor("#87C3C0"));//圖例顏色
+        pieChart.getLegend().setFormToTextSpace(10f); //圖例與文字的間鉅
+        pieChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);//圖例水平居中
+
+
+
+
+
 
         //date
         selectedText = findViewById(R.id.selected_date);
         findViewById(R.id.show_dialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picker.show(getSupportFragmentManager(), picker.toString());
+            }
+        });
+        findViewById(R.id.show_dialog2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 picker.show(getSupportFragmentManager(), picker.toString());
@@ -170,7 +183,16 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                                 String d1 = DateConvertTool.longToString(startDate, "yyyy-MM-dd");
                                 String d2 = DateConvertTool.longToString(endDate, "yyyy-MM-dd");
                                 String s = "Start: "+d1+", \nEnd: "+d2;
-                                selectedText.setText(s);
+                                //selectedText.setText(s);
+                                selectedText = findViewById(R.id.date_start);
+                                selectedText.setText(d1);
+                                selectedText = findViewById(R.id.date_end);
+                                selectedText.setText(d2);
+                                // 建議(需判斷)
+                                selectedText = findViewById(R.id.suggestion);
+                                selectedText.append("這段期間購物的頻率偏高耶！要謹慎理財，掌握金錢的支出～\n");
+                                selectedText.append("\n適度的娱樂能放鬆人的情緒，陶冶人的情操");
+
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }
