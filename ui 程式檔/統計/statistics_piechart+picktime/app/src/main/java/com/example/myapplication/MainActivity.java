@@ -407,6 +407,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             if (activity == null || activity.isFinishing()) return;
 
             try {
+                Log.d("error", result);
                 jsonObject = new JSONObject(result);
 
                 status = jsonObject.getBoolean("status");
@@ -421,9 +422,14 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                     moodResult03 = sqlReturn.moodResult03;
                     moodResult04 = sqlReturn.moodResult04;
                     moodResult05 = sqlReturn.moodResult05;
+                    Log.d("mood1", String.valueOf(moodResult01));
+                    Log.d("mood2", String.valueOf(moodResult02));
+                    Log.d("mood3", String.valueOf(moodResult03));
+                    Log.d("mood4", String.valueOf(moodResult04));
+                    Log.d("mood5", String.valueOf(moodResult05));
 //                    moodResult01 = 0;
 //                    moodResult02 = 0;
-//                    moodResult03 = 100;
+//                    moodResult03 = 1000;
 //                    moodResult04 = 0;
 //                    moodResult05 = 0;
                     if(moodResult01 == 0 && moodResult02 == 0 && moodResult03 == 0 && moodResult04 ==0 && moodResult05 == 0){
