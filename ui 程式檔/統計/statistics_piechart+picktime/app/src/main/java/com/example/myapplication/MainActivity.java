@@ -58,11 +58,18 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     private MaterialDatePicker<?> picker;
     private static ProgressBar progressbar;
     private long today;
+    //心情
     int moodResult01 = sqlReturn.moodResult01;
     int moodResult02 = sqlReturn.moodResult02;
     int moodResult03 = sqlReturn.moodResult03;
     int moodResult04 = sqlReturn.moodResult04;
     int moodResult05 = sqlReturn.moodResult05;
+    //主題
+    int tagResult01 = sqlReturn.tagResult01;
+    int tagResult02 = sqlReturn.tagResult02;
+    int tagResult03 = sqlReturn.tagResult03;
+    int tagResult04 = sqlReturn.tagResult04;
+    int tagResult05 = sqlReturn.tagResult05;
     String d1;
     String d2;
     PieChart pieChart;
@@ -158,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                         "當你不能夠再擁有的時候，你唯一可以做的就是令自己不要忘記。",
                         "不要小看自己，因為人有無限的可能。",
                         "所有看似美好的，都經歷過或者正在經歷著不美好。"};
-        // 資料 - tag
+        // 資料 - 主題
         String[] tag1 =
                 {"每天做一件令別人愉快的事，自己也會特別快樂。",
                         "好心情像冬天裡難得的好天氣，一瞬間照亮瞭心間；好心情像夏天的冰棍，一下子涼爽瞭心田。",
@@ -220,7 +227,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         pieChart.setEntryLabelColor(Color.parseColor("#ffffff")); //圖表裡文字顏色
         ArrayList<PieEntry> visitors = new ArrayList<>();
 
-
+        //心情
         if(moodResult01 != 0){
             visitors.add(new PieEntry(moodResult01,"晴天"));
         }
@@ -237,11 +244,24 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             visitors.add(new PieEntry(moodResult05,"雷雨"));
         }
 
-//        visitors.add(new PieEntry(moodResult01,"美食"));
-//        visitors.add(new PieEntry(moodResult02,"購物"));
-//        visitors.add(new PieEntry(moodResult03,"感情"));
-//        visitors.add(new PieEntry(moodResult04,"旅遊"));
-//        visitors.add(new PieEntry(moodResult05,"休閒娛樂"));
+        //主題
+        /*
+        if(tagResult01 != 0){
+            visitors.add(new PieEntry(tagResult01,"美食"));
+        }
+        if(tagResult02 != 0){
+            visitors.add(new PieEntry(tagResult02,"購物"));
+        }
+        if(tagResult03 != 0){
+            visitors.add(new PieEntry(tagResult03,"感情"));
+        }
+        if(tagResult04 != 0){
+            visitors.add(new PieEntry(tagResult04,"旅遊"));
+        }
+        if(tagResult05 != 0){
+            visitors.add(new PieEntry(tagResult05,"休閒娛樂"));
+        }
+*/
 
         PieDataSet pieDateSet = new PieDataSet(visitors,"");
         ArrayList<Integer> colors = new ArrayList<Integer>();
@@ -272,7 +292,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         pieChart.getLegend().setFormSize(10);  //圖例大小
         pieChart.getLegend().setTextColor(Color.parseColor("#87C3C0"));//圖例顏色
         pieChart.getLegend().setFormToTextSpace(10f); //圖例與文字的間鉅
-        pieChart.getLegend().setXEntrySpace(30);
+        pieChart.getLegend().setXEntrySpace(20);
 //        pieChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);//圖例水平居中
 
         pieChart.invalidate();
@@ -347,7 +367,6 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                                  d1 = DateConvertTool.longToString(startDate, "yyyy/MM/dd");
                                  d2 = DateConvertTool.longToString(endDate, "yyyy/MM/dd");
                                 String s = "Start: "+d1+", \nEnd: "+d2;
-                                //selectedText.setText(s);
                                 selectedText = findViewById(R.id.date_start);
                                 selectedText.setText(d1);
                                 selectedText = findViewById(R.id.date_end);
@@ -374,18 +393,25 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
 
 
-/* mood_statistics */
+/* statistics */
     public void mood_statistics(String startDate,String endDate){
         // String uid = sqlReturn.GetUserID;
+        //心情
         String uid = "2020-04-28 13:08:35";
         Map<String,String> map = new HashMap<>();
         map.put("command", "moodCaculate");
         map.put("startDate", startDate);
         map.put("endDate", endDate);
         map.put("uid", uid);
-        //map.put("uid", uid);
-//        selectedText = findViewById(R.id.suggestion);
-//        selectedText.append(startDate);
+
+
+        //主題
+//        String uid = "2020-04-28 13:08:35";
+//        Map<String,String> map = new HashMap<>();
+//        map.put("command", "tagCaculate");
+//        map.put("startDate", startDate);
+//        map.put("endDate", endDate);
+//        map.put("uid", uid);
 
         new mood_statistics(this).execute((HashMap)map);
 
@@ -412,6 +438,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
                 status = jsonObject.getBoolean("status");
                 if(status){
+                    //心情
                     sqlReturn.moodResult01 = jsonObject.getInt("心情1");
                     sqlReturn.moodResult02 = jsonObject.getInt("心情2");
                     sqlReturn.moodResult03 = jsonObject.getInt("心情3");
@@ -423,15 +450,25 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                     moodResult04 = sqlReturn.moodResult04;
                     moodResult05 = sqlReturn.moodResult05;
                     Log.d("mood1", String.valueOf(moodResult01));
-                    Log.d("mood2", String.valueOf(moodResult02));
-                    Log.d("mood3", String.valueOf(moodResult03));
-                    Log.d("mood4", String.valueOf(moodResult04));
-                    Log.d("mood5", String.valueOf(moodResult05));
-//                    moodResult01 = 0;
-//                    moodResult02 = 0;
-//                    moodResult03 = 1000;
-//                    moodResult04 = 0;
-//                    moodResult05 = 0;
+
+                    //主題
+                    /*
+                    sqlReturn.tagResult01 = jsonObject.getInt("美食tag");
+                    sqlReturn.tagResult02 = jsonObject.getInt("購物tag");
+                    sqlReturn.tagResult03 = jsonObject.getInt("戀愛tag");
+                    sqlReturn.tagResult04 = jsonObject.getInt("旅遊tag");
+                    sqlReturn.tagResult05 = jsonObject.getInt("休閒娛樂tag");
+                    tagResult01 = sqlReturn.tagResult01;
+                    tagResult02 = sqlReturn.tagResult02;
+                    tagResult03 = sqlReturn.tagResult03;
+                    tagResult04 = sqlReturn.tagResult04;
+                    tagResult05 = sqlReturn.tagResult05;
+                    Log.d("tag1", String.valueOf(tagResult01));
+*/
+
+                    //主題
+//                    if(tagResult01 == 0 && tagResult02 == 0 && tagResult03 == 0 && tagResult04 ==0 && moodResult05 == 0){
+                    //心情
                     if(moodResult01 == 0 && moodResult02 == 0 && moodResult03 == 0 && moodResult04 ==0 && moodResult05 == 0){
                         // 資料不足
                         findViewById(R.id.suggestion).setVisibility( View.INVISIBLE );
