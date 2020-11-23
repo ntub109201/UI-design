@@ -1,0 +1,92 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="btn_back_paper" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/btn_back_paper</item>
+        <!--<item name="android:padding">10dip</item>-->
+        <item name="android:drawableTop">@mipmap/btn_back_paper_foreground</item>
+    </style>
+
+    <style name="btn_paper_check" parent="@android:style/Widget.Button">
+        <!--<item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>-->
+        <item name="android:background">@drawable/btn_back_paper</item>
+        <!--<item name="android:padding">10dip</item>-->
+        <item name="android:drawableTop">@mipmap/btn_paper_check_foreground</item>
+    </style>
+<!--新增圖片-->
+    <style name="btn_addphoto" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_back_paper_img</item>
+        <item name="android:paddingRight">-30dp</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:drawableRight">@mipmap/btn_addphoto_foreground</item>
+    </style>
+<!--心情-->
+    <style name="btn_paper_sunny" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-23dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_sunny_foreground</item>
+    </style>
+
+    <style name="btn_paper_mc" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-23dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_mc_foreground</item>
+    </style>
+
+    <style name="btn_paper_cloudy" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-23dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_cloudy_foreground</item>
+    </style>
+
+    <style name="btn_paper_thunder" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-23dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_thunder_foreground</item>
+    </style>
+<!--主題-->
+    <style name="btn_paper_rain" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-25dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_rain_foreground</item>
+    </style>
+
+    <style name="btn_paper_trip" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-25dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_trip_foreground</item>
+    </style>
+    <style name="btn_paper_shopping" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-25dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_shopping_foreground</item>
+    </style>
+    <style name="btn_paper_love" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-25dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_love_foreground</item>
+    </style>
+    <style name="btn_paper_food" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-25dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_food_foreground</item>
+    </style>
+    <style name="btn_paper_casual" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/btn_white_mood</item>
+        <item name="android:paddingRight">-25dp</item>
+        <item name="android:drawableRight">@mipmap/btn_paper_casual_foreground</item>
+    </style>
+
+</resources>
